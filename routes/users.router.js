@@ -36,7 +36,7 @@ userViewRouter.post("/edit/:id", async (req, res) => {
     res.redirect('/users');
 });
 
-tasksViewsRouter.post("/destroy/:id", async (req, res) => {
+userViewRouter.post("/destroy/:id", async (req, res) => {
     const { id } = req.params;
     await destroy(id);
     res.redirect('/users');
