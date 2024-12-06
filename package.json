@@ -1,0 +1,37 @@
+{
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "ejs": "^3.1.10",
+    "express": "^4.21.1",
+    "express-session": "^1.18.1",
+    "joi": "^17.13.3",
+    "nodemailer": "^6.9.16",
+    "nodemon": "^3.1.7",
+    "passport": "^0.7.0",
+    "passport-local": "^1.0.0",
+    "pg": "^8.13.1",
+    "sequelize": "^6.37.5"
+  },
+  "name": "parcial-final-web2",
+  "version": "0.0.1",
+  "description": "Parcil Final de la materia Web 2, Esta difcil xd",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "npx nodemon index.js",
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Express",
+    "API",
+    "Nodemon",
+    "JOI",
+    "Bootstrap",
+    "Node",
+    "JS",
+    "Sequelize"
+  ],
+  "author": "Leonel Zuluaga Tapasco",
+  "license": "ISC"
+}
