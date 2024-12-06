@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PQR - Peticiones, Quejas y Reclamos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="SHA384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <header class="bg-primary text-white text-center py-4">
+        <h1>Gestión de PQR</h1>
+        <p>Envíanos tus Peticiones, Quejas o Reclamos</p>
+        <div class="container">
+    </header>
+
+    <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow">
+                    <div class="card-header bg-primary text-white">
+                        <h4>Formulario de PQR</h4>
+                    </div>
+                    <div class="card-body">
+                        <form action="/pqr" method="POST">
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label">Nombre completo</label>
+                                <input type="text" class="form-control" id="nombre" name="nombrePersona" placeholder="Ingresa tu nombre" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="correo" class="form-label">Correo electrónico</label>
+                                <input type="email" class="form-control" id="correo" name="correo" placeholder="Ingresa tu correo" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="telefono" class="form-label">Telefono</label>
+                                <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="Ingresa tu número de teléfono">
+                            </div>
+                            <div class="mb-3">
+                                <label for="solicitud" class="form-label">Tipo de solicitud</label>
+                                <select class="form-select" id="solicitud" name="solicitud" required>
+                                    <option value="">Selecciona una opción</option>
+                                    <option value="peticion">Petición</option>
+                                    <option value="queja">Queja</option>
+                                    <option value="reclamo">Reclamo</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="descripcion" class="form-label">Descripción</label>
+                                <textarea class="form-control" id="descripcion" name="descripcion" rows="5" placeholder="Escribe tu mensaje aquí" required></textarea>
+                            </div>
+                            <div class="d-grid">
+                                <button type="submit" onsubmit="return showConfirmationMessage()" class="btn btn-warning">Enviar PQR</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; Hecho por por leitoel mas bonito</p>
+    </footer>
+
+
+    <script>
+        function PQRm(id = null, nombrePersona = '', correo = '', telefono = '', solicitud = '', descripcion = '') {
+        document.getElementById('nombre').value = nombrePersona;
+        document.getElementById('correo').value = correo;
+        document.getElementById('telefono').value = telefono;
+        document.getElementById('solicitud').value = solicitud;
+        document.getElementById('descripcion').value = descripcion;
+    }
+
+    function showConfirmationMessage() {
+        alert('La PQR se ha registrado correctamente.');
+        return true; // Permite que el formulario se envíe
+    }
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-QTXRf8Yo/kGeRW/hyb0uWuF3D7lh9/WkDQ13u9lv32RskNvdwRHmVWCEt3rlVAJy" crossorigin="anonymous"></script>
+</body>
+</html>
